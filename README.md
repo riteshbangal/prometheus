@@ -19,13 +19,20 @@ Prometheus services with docker/docker-compose:
     docker run -p 9090:9090 my-prometheus
 
 ##### Create a Prometheus configuration and a docker-compose.yaml and execute following commands:
-    docker-compose up
+    docker-compose up -d
+    
+Prometheus URL: open http://localhost:9000
+You'll see Prometheus UI where you can enter some ad-hoc queries on your metrics, like 'up':
 
 
 
 > References: 
  *	https://github.com/prometheus/prometheus
  *	https://prometheus.io/docs/introduction/first_steps
+ *  https://hub.docker.com/r/prom/prometheus/dockerfile
+ *  https://dev.to/ablx/minimal-prometheus-setup-with-docker-compose-56mp
+ 
+ 
  
  
  
