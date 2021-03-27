@@ -10,7 +10,7 @@ Reference: https://www.tutorialspoint.com/design_pattern/facade_pattern.htm
 # Prometheus Setup 
 Prometheus services with docker/docker-compose:
 ##### Bind-mount the directory containing prometheus.yml onto /etc/prometheus by running::
-    docker run \
+    docker run --name my-prometheus -d \
         -p 9090:9090 \
         -v /config:/etc/prometheus \
         prom/prometheus
@@ -18,7 +18,14 @@ Prometheus services with docker/docker-compose:
     docker build -t my-prometheus .
     docker run -p 9090:9090 my-prometheus
 
-##### Create a Prometheus configuration and a Dockerfile and execute following commands:
-    docker build -t my-prometheus .
-    docker run -p 9090:9090 my-prometheus
+##### Create a Prometheus configuration and a docker-compose.yaml and execute following commands:
+    docker-compose up
+
+
+
+> References: 
+ *	https://github.com/prometheus/prometheus
+ *	https://prometheus.io/docs/introduction/first_steps
+ 
+ 
  
