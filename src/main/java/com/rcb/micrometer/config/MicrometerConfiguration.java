@@ -10,11 +10,7 @@ public class MicrometerConfiguration {
 
     @Bean
     MeterRegistryCustomizer meterRegistryCustomizer(MeterRegistry pMeterRegistry) {
-        /*return meterRegistry -> pMeterRegistry.config()
-                .commonTags("application", "micrometer-prometheus");*/
-        return meterRegistry -> {
-            pMeterRegistry.config()
-                    .commonTags("application", "micrometer-youtube-example");
-        };
+        return meterRegistry -> pMeterRegistry.config()
+                .commonTags("application", "micrometer-prometheus");
     }
 }

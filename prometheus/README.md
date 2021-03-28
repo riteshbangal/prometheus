@@ -21,10 +21,10 @@ Prometheus services with docker/docker-compose:
 ##### Create a Prometheus configuration and a docker-compose.yaml and execute following commands:
     docker-compose up -d
     
-Prometheus URL: open http://localhost:9000
+Prometheus URL: open http://192.168.68.120:9090
 
 You'll see Prometheus UI where you can enter some ad-hoc queries on your metrics, like 'up':
-Some Sample metrics: http://localhost:9000/metrics
+Some Sample metrics: http://192.168.68.120:9090/metrics
 
     http_server_requests_seconds_count{exception="None", method="GET",outcome="SUCCESS",status="200",uri="/actuator/health"}
 
@@ -32,7 +32,7 @@ Some Sample metrics: http://localhost:9000/metrics
 
 If you use --web.enable-lifecycle you can reload configuration files (e.g. rules) without restarting Prometheus:
     
-    curl -X POST http://localhost:9000/-/reload
+    curl -X POST http://192.168.68.120:9090/-/reload
 
 
 > References: 

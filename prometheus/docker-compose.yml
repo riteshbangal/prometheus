@@ -3,6 +3,7 @@ version: '3'
 services:
   prometheus:
     image: prom/prometheus:v2.21.0
+    container_name: my-prometheus
     ports:
       - 9090:9090
     volumes:
